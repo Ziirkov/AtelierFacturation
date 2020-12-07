@@ -1,0 +1,19 @@
+﻿@using Facturation.Shared
+@page "/counter"
+@inject IBusinessData data
+<h1>Counter</h1>
+
+<p>Current count: @currentCount</p>
+
+<p>@data.factures</p>
+
+<button class="btn btn-primary" @onclick="IncrementCount">Click me</button>
+
+@code {
+    private int currentCount = 0;
+
+    private void IncrementCount()
+    {
+        currentCount++;
+    }
+}
